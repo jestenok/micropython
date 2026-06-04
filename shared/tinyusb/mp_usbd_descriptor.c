@@ -49,7 +49,7 @@ const tusb_desc_device_t mp_usbd_builtin_desc_dev = {
     .bcdDevice = 0x0100,
     .iManufacturer = USBD_STR_MANUF,
     .iProduct = USBD_STR_PRODUCT,
-    .iSerialNumber = USBD_STR_SERIAL,
+    .iSerialNumber = 0,  // No serial: matches cheap no-name HID gear, hides RP2350 chip ID.
     .bNumConfigurations = 1,
 };
 
