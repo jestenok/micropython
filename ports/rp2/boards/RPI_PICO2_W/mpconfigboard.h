@@ -1,6 +1,15 @@
 // Board and hardware specific configuration
 #define MICROPY_HW_BOARD_NAME                   "Raspberry Pi Pico 2 W"
 
+// USB identification (spoofed as a generic SINO WEALTH gaming combo).
+#define MICROPY_HW_USB_VID                      (0x258A) // SINO WEALTH
+#define MICROPY_HW_USB_PID                      (0x1006) // Wired gaming KB/Mouse combo
+#define MICROPY_HW_USB_MANUFACTURER_STRING      "SINO WEALTH"
+#define MICROPY_HW_USB_PRODUCT_FS_STRING        "USB Gaming KB Mouse"
+
+// Disable USB CDC (no virtual COM port exposed to the host).
+#define MICROPY_HW_USB_CDC                      (0)
+
 // Enable networking.
 #define MICROPY_PY_NETWORK 1
 #define MICROPY_PY_NETWORK_HOSTNAME_DEFAULT     "Pico2W"
